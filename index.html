@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昱蓁真心話大考驗 - 終極挑戰</title>
+    <style>
+        body { font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; background-color: #f0f4f8; display: flex; justify-content: center; padding: 20px; line-height: 1.6; color: #2d3436; }
+        .quiz-container { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); max-width: 650px; width: 100%; }
+        h1 { color: #6c5ce7; text-align: center; margin-bottom: 5px; font-size: 2em; }
+        p.subtitle { text-align: center; color: #636e72; margin-bottom: 40px; font-weight: 300; }
+        .question { margin-bottom: 30px; border-bottom: 2px solid #f1f2f6; padding-bottom: 25px; }
+        .question p { font-weight: 600; margin-bottom: 15px; font-size: 1.1em; color: #2d3436; }
+        .options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        label { background: #f8f9fa; padding: 12px 15px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease; border: 2px solid transparent; display: flex; align-items: center; }
+        label:hover { background: #eef2ff; border-color: #a29bfe; }
+        input[type="radio"] { margin-right: 12px; transform: scale(1.2); accent-color: #6c5ce7; }
+        button { width: 100%; background: linear-gradient(135deg, #6c5ce7, #a29bfe); color: white; border: none; padding: 18px; border-radius: 15px; font-size: 20px; cursor: pointer; margin-top: 20px; font-weight: 700; transition: transform 0.2s; }
+        button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3); }
+        #result { margin-top: 30px; padding: 25px; border-radius: 20px; text-align: center; display: none; background: #e0fbff; border: 3px solid #81ecec; }
+        .score-text { font-size: 24px; color: #0984e3; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>✨ 昱蓁真心話大考驗 ✨</h1>
+    <p class="subtitle">這不是普通測驗，這是靈魂的碰撞！</p>
+    
+    <form id="quizForm">
+        <div class="question">
+            <p>1. 請問昱蓁養的寵物名稱是？</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="0"> 乖乖</label>
+                <label><input type="radio" name="q1" value="1"> 可樂果</label>
+                <label><input type="radio" name="q1" value="0"> 奇多</label>
+                <label><input type="radio" name="q1" value="0"> 浪味仙</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. 請問昱蓁最喜歡的運動是？</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="0"> 羽球</label>
+                <label><input type="radio" name="q2" value="1"> 排球</label>
+                <label><input type="radio" name="q2" value="0"> 攀岩</label>
+                <label><input type="radio" name="q2" value="0"> 潛水</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. 請問昱蓁念的高中是？</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="0"> 台南女中</label>
+                <label><input type="radio" name="q3" value="0"> 曉明女中</label>
+                <label><input type="radio" name="q3" value="1"> 台中女中</label>
+                <label><input type="radio" name="q3" value="0"> 北一女中</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. 請問昱蓁國中的座號是？</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="1"> 1 號</label>
+                <label><input type="radio" name="q4" value="0"> 13 號</label>
+                <label><input type="radio" name="q4" value="0"> 25 號</label>
+                <label><input type="radio" name="q4" value="0"> 50 號</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. 請問昱蓁的家鄉在哪裡？</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="0"> 台南永康</label>
+                <label><input type="radio" name="q5" value="1"> 台中安南</label>
+                <label><input type="radio" name="q5" value="0"> 彰化和美</label>
+                <label><input type="radio" name="q5" value="0"> 嘉義民雄</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. 昱蓁點手搖飲時，最堅持的甜度是？</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="0"> 微糖</label>
+                <label><input type="radio" name="q6" value="1"> 無糖</label>
+                <label><input type="radio" name="q6" value="0"> 半糖</label>
+                <label><input type="radio" name="q6" value="0"> 多糖</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. 昱蓁家裡共有幾個兄弟姐妹（包含她自己）？</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="0"> 2 個</label>
+                <label><input type="radio" name="q7" value="0"> 3 個</label>
+                <label><input type="radio" name="q7" value="1"> 4 個</label>
+                <label><input type="radio" name="q7" value="0"> 5 個</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. 昱蓁最喜歡的冰淇淋店是哪一家？</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="0"> 酷聖石</label>
+                <label><input type="radio" name="q8" value="1"> 搖滾牛</label>
+                <label><input type="radio" name="q8" value="0"> 哈根達斯</label>
+                <label><input type="radio" name="q8" value="0"> 蜷尾家</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. 請問昱蓁的 MBTI 人格特質是？</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="1"> ISFP</label>
+                <label><input type="radio" name="q9" value="0"> ENFJ</label>
+                <label><input type="radio" name="q9" value="0"> INTP</label>
+                <label><input type="radio" name="q9" value="0"> ESTP</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. 昱蓁最無法忍受別人在她面前做什麼？</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="1"> 抽菸</label>
+                <label><input type="radio" name="q10" value="0"> 抖腳</label>
+                <label><input type="radio" name="q10" value="0"> 遲到</label>
+                <label><input type="radio" name="q10" value="0"> 嚼口香糖</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>11. 昱蓁最喜歡的韓國男子團體（K-POP）是？</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="0"> BTS</label>
+                <label><input type="radio" name="q11" value="0"> EXO</label>
+                <label><input type="radio" name="q11" value="1"> SHINee</label>
+                <label><input type="radio" name="q11" value="0"> SEVENTEEN</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>12. 昱蓁還沒去過哪一個國家？</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="1"> 美國</label>
+                <label><input type="radio" name="q12" value="0"> 日本</label>
+                <label><input type="radio" name="q12" value="0"> 韓國</label>
+                <label><input type="radio" name="q12" value="0"> 泰國</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>13. 請問昱蓁目前近視大概幾度？</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="0"> 200 度</label>
+                <label><input type="radio" name="q13" value="0"> 450 度</label>
+                <label><input type="radio" name="q13" value="1"> 600 度</label>
+                <label><input type="radio" name="q13" value="0"> 800 度</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>14. 昱蓁在國小時參加過什麼校隊或特殊才能？</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="0"> 合唱團</label>
+                <label><input type="radio" name="q14" value="1"> 田徑隊</label>
+                <label><input type="radio" name="q14" value="0"> 奧數班</label>
+                <label><input type="radio" name="q14" value="0"> 鋼琴組</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>15. 昱蓁覺得自己的靈魂深處最像哪種動物？</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="1"> 貓咪</label>
+                <label><input type="radio" name="q15" value="0"> 兔子</label>
+                <label><input type="radio" name="q15" value="0"> 海豚</label>
+                <label><input type="radio" name="q15" value="0"> 熊貓</label>
+            </div>
+        </div>
+
+        <button type="button" onclick="calculateScore()">交卷！看我的表現</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const total = 15;
+        
+        const formData = new FormData(form);
+        for (let value of formData.values()) {
+            score += parseInt(value);
+        }
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        let title = "";
+        let comment = "";
+        
+        if (score === total) {
+            title = "🏅 昱蓁百科全書本人";
+            comment = "太扯了！你對她的了解已經到了『讀心術』的等級，請收下我的膝蓋！";
+        } else if (score >= 12) {
+            title = "⭐ 頂級親信好友";
+            comment = "你非常了解她！不管是國小田徑隊還是近視度數都難不倒你。";
+        } else if (score >= 8) {
+            title = "😊 稱職的好夥伴";
+            comment = "表現不錯，你已經掌握了昱蓁的大部分情報了！";
+        } else if (score >= 4) {
+            title = "😅 再接再厲的小粉絲";
+            comment = "看來你需要多跟昱蓁去吃搖滾牛冰淇淋聯絡感情喔！";
+        } else {
+            title = "👀 你哪位？";
+            comment = "快去跟昱蓁認錯，然後重新看一遍她的動態！";
+        }
+        
+        resultDiv.innerHTML = `<div class="score-text">得分：${score} / ${total}</div><h3>${title}</h3><p>${comment}</p>`;
+        
+        window.scrollTo({
+            top: resultDiv.offsetTop - 20,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>
